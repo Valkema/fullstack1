@@ -1,1 +1,1 @@
-GET http://127.0.0.1:5000/api/superheroes?page=1&item_on_page=10
+GET http://127.0.0.1:5000/api/superheroes?page=1&results=10

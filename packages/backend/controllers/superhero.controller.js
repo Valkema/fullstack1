@@ -15,13 +15,13 @@ module.exports.create = async (req, res, next) => {
 
 
 module.exports.getMany = async (req, res, next) => {
- const {query: {page, item_on_page}} = req;
+ const {query: {page, results}} = req;
  try{
   const foundHeroes = await Superhero.findAll({
     attributes: {
       exclude: ['id', 'createdAt', 'updatedAt'],
-      limit: item_on_page,
-      offset: item_on_page * (page - 1),
+      limit: results,
+      offset: results * (page - 1),
     }
   });
   res.status(200).send({data: foundHeroes})
@@ -81,7 +81,7 @@ module.exports.deleteById = async (req, res, next) => {
       },
     });
     if (foundHero) {
-      return res.sendStatus(204);
+      return res.sendStatus(200).send('Deleted!');
     }
     res.status(404).send("Not found");
   } catch (err) {

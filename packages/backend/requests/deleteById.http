@@ -1,1 +1,1 @@
-DELETE http://127.0.0.1:5000/api/superheroes/2
+DELETE http://127.0.0.1:5000/api/superheroes/5
