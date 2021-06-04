@@ -1,0 +1,10 @@
+POST http://127.0.0.1:5000/api/superheroes
+Content-Type: application/json
+
+{
+    "nickname": "Gekko5",
+    "realName": "Greg5",
+    "originDescription": "Super-strong boy",
+    "superpowers": ["Super muscule", "Super running", "Gekko mobile camouflage"],
+    "catchPhrase": "Super power!!!!"
+}
